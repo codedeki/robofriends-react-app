@@ -4,6 +4,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
+import Header from '../components/Header';
 import '../containers/App.css';
 
 import { setSearchField, requestRobots } from '../actions';
@@ -45,7 +46,7 @@ const filteredRobots = robots.filter(robot => {
 
     (
         <div className='tc'>
-            <h1 className='f1'>RoboFriends</h1>
+            <Header/>
             <SearchBox searchChange={OnSearchChange} />
             <Scroll>
                 <ErrorBoundry>
